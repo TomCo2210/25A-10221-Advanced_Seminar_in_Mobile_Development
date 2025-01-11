@@ -1,0 +1,44 @@
+name: Convert PPTX to PNGs
+
+on:
+  workflow_dispatch:  # Allows manual trigger
+  push:
+    paths:
+      # - '**/*.pptx'   # Trigger when a .pptx file is pushed or updated
+      - '**/*.pdf'   # Trigger when a .pdf file is pushed or updated
+
+permissions:   # Grant write permission to the repository
+  contents: write
+  
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          # sudo apt install -y libreoffice
+          sudo apt install -y poppler-utils
+
+      # - name: Convert PPTX to PDF
+      #   run: |
+      #     mkdir -p Assignment/output
+      #     libreoffice --headless --convert-to pdf Assignment/examples.pptx --outdir Assignment
+
+      - name: Convert PDF to PNGs
+        run: |
+          mkdir -p Assignment/output
+          pdftoppm -png Assignment/examples.pdf Assignment/output/slide
+
+      - name: Commit and push PNGs
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add Assignment/output/*.png
+          # git commit -m 'Add converted PNGs from PPTX'
+          git commit -m 'Add converted PNGs from PDF'
+          git push
