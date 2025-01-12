@@ -56,6 +56,10 @@
 
 ![Idea #9](output/slide-11.png)
 
+### Idea #10 - Call Logger SDK
+
+![Idea #10](output/slide-12.png)
+
 ---
 
 [🏠 Back to 25A-10221 Advanced Seminar in Mobile Development](../README.md)

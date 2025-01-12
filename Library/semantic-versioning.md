@@ -9,7 +9,9 @@ MAJOR.MINOR.PATCH
 There are simple rules that indicate when we must increment each of these versions:
 
 MAJOR is incremented when we make breaking API changes.
+
 MINOR is incremented when we add new functionality without breaking the existing API or functionality.
+
 PATCH is incremented when we make backwards-compatible bug fixes.
 
 ## Guidelines
