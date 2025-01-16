@@ -43,9 +43,9 @@
         publishing {
             publications {
                 create<MavenPublication>("release") {
-                    groupId = 'com.github.your-username' // Change as needed
-                    artifactId = 'your-library-name' // Change as needed
-                    version = '1.0.0' // Change as needed
+                    groupId = "com.github.your-username" // Change as needed
+                    artifactId = "your-library-name" // Change as needed
+                    version = "1.0.0" // Change as needed
                     artifact(tasks.getByName("bundleReleaseAar"))
 
                     // Add dependencies to the Maven publication configuration (api or implementation) 
