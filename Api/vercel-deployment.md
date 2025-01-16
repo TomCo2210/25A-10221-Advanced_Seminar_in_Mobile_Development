@@ -49,7 +49,7 @@ This guide will walk you through the process of deploying a Flask API to Vercel.
 - Push your Flask API to a GitHub repository.
 - Import your GitHub repository to Vercel.
 - Configure the deployment settings:
-  - Set the build command to `pip install -r requirements.txt`.
+  - Set the install command to `pip install -r requirements.txt`.
   - Set the output directory to `.`.
   - Set the environment variables if needed.
 - Deploy your Flask API to Vercel.
