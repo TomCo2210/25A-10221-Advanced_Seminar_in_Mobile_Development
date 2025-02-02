@@ -4,7 +4,7 @@
 
 ## Deadline
 
-**Submission Date:** February 2nd, 2025 at 23:59 via Moodle, as GitHub repository links. And a presentation in class on February 3rd/4th, 2025 (as per the course schedule).
+**Submission Date:** February 4th, 2025 at 23:59 via Moodle, as GitHub repository links. And a presentation in class on February 5th, 2025 at 3pm in class Z1.
 
 ## Project Requirements
 
